@@ -1,4 +1,13 @@
 import Character from "./Character";
+import { sizePacman, directions, GameOver } from "./index";
+
+
+const stepGhost = 5;
+const heightGhost = 40;
+const widthGhost = 35;
+
+const ghostLimitStraightLine = 100;
+const colorsGhost = ['cyan', '#f5b041', '#e74c3c', '#e8daef'];
 
 export default class Ghost extends Character {
 	constructor (originalX, originalY, wallsInfo, pacman) {

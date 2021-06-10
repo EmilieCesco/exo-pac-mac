@@ -1,6 +1,6 @@
+import { heightFloor } from "./index";
 
-import Character from "./Character";
-
+const wallDistance = 2;
 
 // Classes of characters
 export default class Character {
@@ -11,9 +11,9 @@ export default class Character {
 	  this.wallsInfo = wallsInfo;
 	  return this;
 	}
-  
+
 	getDirection = () => this.direction;
-	
+
 	setDirection = direction => {
 	  this.direction = direction;
 	}
@@ -58,7 +58,7 @@ export default class Character {
 	  this.wallsInfo.forEach(wall => {
 		if(
 		  (((nextHorizontalMove + 25) >= (wall.left - wallDistance)) && ((nextHorizontalMove + 25) <= wall.left )) ||
-		  (((nextHorizontalMove - 25) >= (wall.left + wall.width)) && ((nextHorizontalMove - 25) <= (wall.left + wall.width + wallDistance))) 
+		  (((nextHorizontalMove - 25) >= (wall.left + wall.width)) && ((nextHorizontalMove - 25) <= (wall.left + wall.width + wallDistance)))
 		) {
 		  if(
 			((nextVerticalMove + 25) <= (heightFloor - wall.top)) && (nextVerticalMove >= (heightFloor - wall.top - wall.height))
@@ -69,7 +69,7 @@ export default class Character {
 	  })
 	  return ok;
 	}
-  
+
 	handleMove = (move, step) => {
 	  switch (move) {
 		case 'ArrowUp':

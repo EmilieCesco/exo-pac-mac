@@ -4,26 +4,19 @@ import Ghost from "./Ghost"
 const root = document.getElementById('root');
 
 // General constants
-const widthFloor = 700;
-const heightFloor = 700;
-const step = 5;
-const stepGhost = 5;
-const sizePacman = 50;
-const heightGhost = 40;
-const widthGhost = 35;
-const wallDistance = 2;
-const maxFood = 88;
-const foodAte = [];
-let intervalGhostId = null;
-const angleDirection = {
+export const widthFloor = 700;
+export const heightFloor = 700;
+export const sizePacman = 50;
+export const directions = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+export const angleDirection = {
   ArrowUp: -90,
   ArrowDown: 90,
   ArrowLeft: 180,
   ArrowRight: 0,
 };
-const directions = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
-const ghostLimitStraightLine = 100;
-const colorsGhost = ['cyan', '#f5b041', '#e74c3c', '#e8daef'];
+
+let intervalGhostId = null;
+
 
 const animMouth = " @keyframes eat {\
   0% {\
@@ -85,8 +78,8 @@ const wallsInfos = [
 ];
 
 // Food 
-const foodWidth = 10;
-const foodHeight = 10;
+export const foodWidth = 10;
+export const foodHeight = 10;
 const foodColor =  "#f3f1d6";
 const foodsPosition = [
   {top: 70, left: 80, id: 1},
@@ -229,7 +222,7 @@ const foods = foodsPosition.map((p, i) => {
   return f;
 });
 
-function GameOver() {
+export function GameOver() {
   const card = document.createElement('div');
   card.style.width = "300px";
   card.style.height = "300px";

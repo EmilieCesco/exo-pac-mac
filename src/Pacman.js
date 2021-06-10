@@ -1,3 +1,10 @@
+import Character from "./Character";
+import { sizePacman, directions, angleDirection, heightFloor, foodHeight, foodWidth} from "./index";
+
+const maxFood = 88;
+const foodAte = [];
+const step = 5;
+
 export default class PacMan extends Character {
 	constructor (originalX, originalY, wallsInfo, foods) {
 	  const _super = super(originalX, originalY, wallsInfo);
