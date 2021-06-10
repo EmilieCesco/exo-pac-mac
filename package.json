@@ -1,0 +1,24 @@
+{
+  "name": "pacman",
+  "version": "1.0.0",
+  "description": "jeu pacman",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilieCesco/exo-pac-mac.git"
+  },
+  "author": "Emilie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilieCesco/exo-pac-mac/issues"
+  },
+  "homepage": "https://github.com/EmilieCesco/exo-pac-mac#readme",
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
